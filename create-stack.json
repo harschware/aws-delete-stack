@@ -1,0 +1,21 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "Cloudformation Template to spin up an EMR cluster with network connectivity to the given EC2 instance",
+    "Parameters": {
+        "vpcId": {
+            "Description": "Id of the VPC where Kylo edge node resides.  A security group will be added here, opening port access from Kylo edge node to EMR cluster",
+            "Type": "AWS::EC2::VPC::Id"
+        }
+    },
+    "Resources": {
+        "KyloStackS1SG1": {
+            "Properties": {
+                "GroupDescription": "A group where you can customize network access to this EMR",
+                "VpcId": {
+                    "Ref": "vpcId"
+                }
+            },
+            "Type": "AWS::EC2::SecurityGroup"
+        }
+    }
+}
