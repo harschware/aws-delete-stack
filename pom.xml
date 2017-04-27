@@ -15,7 +15,7 @@
     <slf4j.log4j12.version>1.7.10</slf4j.log4j12.version>
     <junit.version>4.11</junit.version>
 
-    <aws.version>1.11.114</aws.version>
+    <aws.version>1.11.124</aws.version>
 
     <!-- plugins -->
     <plugin.compiler.version>3.2</plugin.compiler.version>
@@ -31,6 +31,13 @@
       <groupId>com.amazonaws</groupId>
       <artifactId>aws-java-sdk</artifactId>
       <version>${aws.version}</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+    <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>guava</artifactId>
+      <version>19.0</version>
     </dependency>
 
     <!-- Logging -->

@@ -6,7 +6,11 @@ if [ -z ${REGION} ]; then
         exit 1
 fi
 
-VPC_ID=vpc-74497b11
+if [ -z ${VPC_ID} ]; then
+        >&2 echo "You must provide a VPC id in env var VPC_ID"
+        exit 1
+fi
+
 echo "VPC_ID=$VPC_ID"
 
 STACKNAME=AwsDeleteStackS1
